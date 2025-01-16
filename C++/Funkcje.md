@@ -1,3 +1,15 @@
+Spis treści
+1. Mechanizm wywołania funkcji
+2. Heap vs Stack
+3. Deklaracja i definicja funkcji
+4. Typ zwracany i argumenty
+5. Typy parametrów
+6. Funkcje specjalne
+	1. Inline
+	2. Constexpr
+	3. Lambda
+
+---
 Funkcje w C++ są kluczowym mechanizmem modularności, umożliwiającym podział kodu na mniejsze, wielokrotnie używane fragmenty. Ich zrozumienie obejmuje kilka aspektów: mechanizm wywołania, różnicę między deklaracją a definicją, sposób przekazywania argumentów, obsługę typów zwracanych oraz zastosowanie rekursji.
 
 ---
@@ -17,6 +29,28 @@ Funkcje w C++ są kluczowym mechanizmem modularności, umożliwiającym podział
 4. Zwrócenie wyniku i oczyszczenie stosu:
 	1. Wynik zwracany przez funkcję jest umieszczony w odpowiednim rejestrze np. EAX dla liczb całkowitych w architekturze x86.
 	2. Sterowanie wraca do miejsca wywołania a stos jest oczyszczany.
+
+---
+### Mechanizm Wywołania (uproszczony)
+
+1. Na stosie zostaje utworzona ramka funkcji
+2. Następnie do niej trafiają:
+    - Parametry funkcji w odwrotnej kolejności niż podane
+    - Adres miejsca do którego ma wrócić program po zakończeniu funkcji
+    - Jest rezerwowane miejsce na zmienne lokalne, które pojawiają się w funkcji
+    - Funkcja jest wykonywana
+  
+Źródła
+1. https://www.youtube.com/watch?v=aCPkszeKRa4
+2. https://www.youtube.com/watch?v=Q2sFmqvpBe0
+3. https://www.youtube.com/watch?v=uG_JOJgwbco
+
+---
+### Heap vs Stack
+
+Stos - lokalna pamięć wykorzystywana przy wywołaniu funkcji. To tutaj trafiają zmienne, które deklarujemy.
+
+Heap - pamięć przeznaczona do dynamicznej alokacji funkcji. To stąd zostaje przyznana pamięć programowi, który używa wskaźników.
 
 ---
 ### Deklaracja, i definicja funkcji:
