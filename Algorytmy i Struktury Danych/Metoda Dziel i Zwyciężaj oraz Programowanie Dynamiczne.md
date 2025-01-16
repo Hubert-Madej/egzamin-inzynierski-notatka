@@ -76,28 +76,30 @@ merge_sort(arr, s, e)
 ```
 
 ```python
-def get_partition_index(arr, s, e):
-	target_index = e
-	target = arr[e]
-	slow_ptr = s - 1
+def partition(arr, s, e):
+	pivot_idx = e
+	pivot = arr[pivot_idx]
+	i = s - 1
 
-	for fast_ptr in range(s, e):
-		if arr[fast_ptr] <= target:
-			slow_ptr += 1
-			(arr[fast_ptr], arr[slow_ptr]) = (arr[slow_ptr], arr[fast_ptr])
+	for j in range(s, e):
+		if arr[j] <= pivot:
+			i += 1
+			(arr[j], arr[i]) = (arr[i], arr[j])
 
-	slow_ptr += 1
-	(arr[slow_ptr], arr[target_index]) = (arr[target_index], arr[slow_ptr])
+	i += 1
+	(arr[i], arr[pivot_idx]) = (arr[pivot_idx], arr[i])
 
-	return slow_ptr
+	return pivot_idx
 
 def quick_sort(arr, s, e):
 	if e - s + 1 <= 1:
 		return arr
-	
-	pi = get_partition_index(arr, s, e)
-	quick_sort(arr, s, pi - 1)
-	quick_sort(arr, pi + 1, e)
+
+	pivot_idx = partition(arr, s, e)
+	quick_sort(arr, s, pivot_idx - 1)
+	quick_sort(arr, pivot_idx + 1, e)
+
+	return arr
 
 arr = [5,2,9,0,1,3,8,6,5,2]
 s = 0
