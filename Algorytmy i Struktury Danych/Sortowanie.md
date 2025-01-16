@@ -13,7 +13,7 @@ To jeden z najprostszych algorytmów sortowania. Działa podobnie do sortowania 
 
 ![[insertion_sort.jpg]]
 
-Złożoność czasowa:
+**Złożoność czasowa:**
 - Najlepszy przypadek: $O(n)$ (dla posortowanej tablicy).
 - Średni i najgorszy przypadek: $O(n^2)$.
 
@@ -65,3 +65,31 @@ def shell_sort(arr):
         
         gap //= 2
 ```
+
+**Złożoność czasowa:**
+- Średnio: od $O(n^{3/2})$ do O($n\log ^2n$) w zależności od przyrostów.
+- Najgorszy przypadek: $O(n^2)$.
+
+Jest szybszy od tradycyjnego sortowania przez wstawianie, jednak należy zauważyć, że wybór przyrostów wpływa na wydajność.
+
+---
+### Sortowanie przez wybieranie (Selection Sort)
+
+Algorytm polega na wielokrotnym znajdowaniu najmniejszego (lub największego) elementu i umieszczaniu go na właściwej pozycji.
+
+Algorytm:
+- Wyznacz wolny wskaźnik $i$ iterując się po wszystkich elementach tablicy.
+- Wyznacz szybki wskaźnik $j$ iterując się po elementach między z przedziału $<i+1, n)$, gdzie $n$ to długość tablicy.
+- Korzystając z szybkiego wskaźnika znajdź najmniejszy / największy element w zbiorze $<i+1, n)$ i zamień go z elementem wskazywanym przez wolny wskaźnik $j$.
+
+![[selection_sort_min.jpg]]
+
+Złożoność czasowa: $O(n^2)$ niezależnie od danych.
+Złożoność pamięciowa: $O(1)$.
+
+Zaletą algorytmu jest prosta implementacja, oraz minimalizowana jest liczba operacji zamieniania, natomiast ponownie mamy złożoność $O(n^2)$ co sprawia, że algorytm jest bardzo wolny dla dużych danych.
+
+### Sortowanie przez prostą zamianę (Bubble Sort)
+
+Polega na wielokrotnym przechodzeniu przez tablicę i zamienianiu miejscami sąsiadujących elementów, jeśli są w złej kolejności.
+
