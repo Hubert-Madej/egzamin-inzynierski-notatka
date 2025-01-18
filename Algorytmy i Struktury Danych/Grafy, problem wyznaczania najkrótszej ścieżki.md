@@ -66,7 +66,7 @@ Problem polega na znalezieniu ścieżki między dwoma wierzchołkami w grafie, k
 **Relaksacja:**
 W algorytmach wyszukiwania najkrótszej ścieżki, relaksacja to proces sprawdzania, czy przejście przez dany wierzchołek prowadzi do krótszej ścieżki do innego wierzchołka. Jeśli tak, to aktualizujemy odległość do tego wierzchołka:
 $$
-if \ distance[u] + w(u,v) < distance[v], \ to distance[v] = distance[u] + w(u,v)
+if \ distance[u] + w(u,v) < distance[v], \ to \ distance[v] = distance[u] + w(u,v)
 $$
 gdzie:
 - $u$ - obecnie przetwarzany wierzchołek
@@ -160,5 +160,53 @@ distances = dijkstra(graph, "0")
 ```
 ###### Algorytm Bellmana-Forda
 
+Algorytm Bellmana-Forda jest algorytmem służącym do znajdowania najkrótszej ścieżki z jednego wierzchołka do wszystkich innych w grafie, który może zawierać zarówno dodatnie, jak i ujemne wagi krawędzi. Jego kluczową cechą jest zdolność do wykrywania cykli o ujemnej wadze, co czyni go bardziej uniwersalnym niż algorytm Dijkstry, który nie radzi sobie z ujemnymi wagami.
 
+Skorzystamy z tego samego grafu, co dla poprzedniego algorytmu. Początkowo wszystkie dystanse (oprócz wierzchołka startowego, którego dystans wynosi $0$) są ustawione na $\infty$, ponieważ są nieznane. Lista odwiedzonych wierzchołków jest pusta. Następnie algorytm wykonuje następujące kroki przez dokładnie $V - 1$ iteracji, gdzie $V$ to liczba wierzchołków w grafie:
+1. Dla każdej krawędzi $(u, v)$ z wagą $w$, sprawdzamy, czy dystans do $v$ można zmniejszyć przechodząc przez $u$. Jeśli tak, aktualizujemy dystans:
+2. Po wykonaniu $V - 1$ iteracji sprawdzamy, czy istnieje cykl o ujemnej wadze. Jeśli dla którejkolwiek krawędzi $(u, v)$ relaksacja jest nadal możliwa, oznacza to istnienie cyklu o ujemnej wadze, a algorytm zgłasza ten fakt.
+Po zakończeniu algorytmu tablica dystansów zawiera najkrótsze ścieżki z wierzchołka startowego do wszystkich innych wierzchołków w grafie. Jeśli wykryto cykl o ujemnej wadze, algorytm zgłasza jego obecność, co pozwala uniknąć błędnych obliczeń najkrótszych ścieżek.
+
+**Przykładowa Implementacja:**
+Złożoność Czasowa: $O((V+E) \cdot \log V)$
+Złożoność Pamięciowa: $O(V + E)$
+
+```python
+def bellman_ford(graph, source_node):
+    distances = { node: float('inf') for node in graph.keys() }
+    distances[source_node] = 0
+
+    n = len(graph)
+    for _ in range(n - 1):
+        for u in graph.keys():
+            for v, distance in graph[u]:
+                # Relaxation
+                new_distance = distances[u] + distance
+                if new_distance < distances[v]:
+                    distances[v] = new_distance
+
+
+    # Check for negative cycle
+    for u in graph.keys():
+        for v, distance in graph[u]:
+            new_distance = distances[u] + distance
+            if new_distance < distances[v]:
+                return None
+
+    return distances
+
+
+# <Node>: [(NeighborNode, Distance)]
+graph = {
+    "0": [("1", 2), ("2", 6)],
+    "1": [("0", 2), ("3", 5)],
+    "2": [("0", 6), ("3", 8)],
+    "3": [("1", 5), ("2", 8), ("4", 10), ("5", 15)],
+    "4": [("3", 10), ("5", 6), ("6", 2)],
+    "5": [("3", 15), ("4", 6), ("6", 6), ("4", -20)], # -20 causes negative cycle here.
+    "6": [("4", 2), ("5", 6)]
+}
+
+distances = bellman_ford(graph, "0")
+```
 ###### Algorytm Floyda-Warshalla
