@@ -8,7 +8,7 @@ Podstawowe elementy układów cyfrowych realizujące proste operacje logiczne. I
 **NOT (negacja)** - odwraca stan logiczny wejścia.
 **NAND, NOR, XOR, XNOR** - kombinacje lub wariacje podstawowych funkcji logicznych.
 
-![[Pasted image 20250108195748.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108195748.png]]
 
 Wykorzystywane są one do realizacji złożonych funkcji logicznych oraz realizacji układów kombinacyjnych. Dodatkowo za pomocą bramek OR, AND i NOT jesteśmy w stanie zrealizować **układy zupełne**, które są w stanie zrealizować dowolną funkcję logiczną. NAND i NOR nazywa się **funkcjonalnie pełnymi** i można za ich pomocą zrealizować dowolną funkcję logiczną. Różnica między układem zupełnym, a pełnym polega na tym, że układy zupełne realizują dowolną funkcję za pomocą ***co najmniej dwóch bramek***, a układy pełne przy pomocy ***tylko jednego typu bramki***.
 
@@ -25,7 +25,7 @@ Układ wybierający jeden z wielu sygnałów wejściowych i przekazuje go na wyj
 - **Zasada działania:** Multiplekser przekazuje sygnał wejściowy na wyjście na podstawie kombinacji sygnałów sterujących. Jeśli mamy $2^n$ wejść, potrzebujemy $n$ bitów sterujących, aby wybrać odpowiedni sygnał wejściowy.
 - **Przykład:** 4-na-1 multiplekser ma 4 wejścia danych i 2 bity sterujące ($2^2=4$), dzięki temu wybieramy jeden z 4 sygnałów wejściowych.
 
-![[Pasted image 20250108195234.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108195234.png]]
 
 ##### Komutatory - Demultiplekser
 Układ odwrotny do multipleksera. Rozdziela jeden sygnał wejściowy na wiele sygnałów wyjściowych, zależnie od sygnałów sterujących:
@@ -34,7 +34,7 @@ Układ odwrotny do multipleksera. Rozdziela jeden sygnał wejściowy na wiele sy
 - **Zasada działania:** Demultiplekser przyjmuje jeden sygnał na wejściu i kieruje go na jedno z wielu wyjść, zależnie od kombinacji układów sterujących.
 - **Przykład:**  1-na-4 demultiplekser ma 1 wejście danych i 2 bity sterujące, a jego wyjścia są zależne od 2 bitów sterujących.
 
-![[Pasted image 20250108195336.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108195336.png]]
 
 ##### Konwertery Kodów
 Układy kombinacyjne służące do przekształcania informacji reprezentowanej w jednym kodzie do innego formatu.
@@ -45,7 +45,7 @@ Układ, który zmienia kod "1 z n" na dowolny inny kod dwójkowy (różny od 1 z
 - **Zasada działania:** Koder przypisuje unikalny kod binarny do każdego z wejść, a następnie przesyła ten kod na wyjście.
 - **Przykład:** Koder 4-do-2 (4 wejścia, 2 bity wyjściowe) przypisuje każdemu z 4 wejść binarny kod 2-bitowy (np. wejście 1 → 00, wejście 2 → 01 itd.).
 
-![[Pasted image 20250108195651.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108195651.png]]
 
 ##### Konwertery Kodów - Dekoder
 Układ, który zmienia naturalny kod binarny o długości $n$, lub każdego innego kodu, na kod "1 z n" (o długości K). Jego działanie jest odwrotne do Kodera, tzn. zamienia kod binarny na jego reprezentacje w postaci tylko jednego wybranego wyjścia. W zależności od ilości wyjść nazywa się go dekoderem 1 z N.
@@ -54,7 +54,7 @@ Układ, który zmienia naturalny kod binarny o długości $n$, lub każdego inne
 - **Zasada działania:** Dekoder "rozpakowuje" kod binarny i ustawia odpowiednie wyjście w stan aktywny (zwykle na 1), podczas gdy pozostałe pozostają w stanie nieaktywnym (zwykle 0).
 - **Przykład:** Dekoder 2-do-4 przyjmuje 2 bity kodu i wybiera jedno z 4 wyjść (np. kod 00 → wyjście 0, kod 01 → wyjście 1 itd.).
 
-![[Pasted image 20250108195723.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108195723.png]]
 
 ##### Konwertery Kodów - Transkoder
 Układ, który przekształca kod z jednej postaci na inną (oba kody muszą być różne od "1 z n"), ale na ogół zachowuje tą samą liczbę bitów. Czyli posiada $n$ wejść oraz $k$ wyjść. Typowym przykładem takiego układu jest układ zmieniający naturalny kod binarny na kod wyświetlacza siedmiosegmentowego (mylony często z dekoderem). Różnica miedzy transkoderem, a dekoderem polega na tym, że transkoder zmienia jedynie formę reprezentacji na inną formę reprezentacji przy tej samej liczbie bitów
@@ -63,7 +63,7 @@ Układ, który przekształca kod z jednej postaci na inną (oba kody muszą być
 - **Zasada działania:** Transkoder zmienia sposób reprezentowania wartości bez zmiany ilości informacji.
 - **Przykład:** Transkoder 4-do-3 zmienia 4-bitowy kod na 3-bitowy, zmieniając kodowanie bez utraty informacji.
 
-![[Pasted image 20250108200620.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108200620.png]]
 
 ### Bloki Artmetyczne
 Układy kombinacyjne, które wykonują operacje matematyczne lub porównawcze na liczbach binarnych.
@@ -97,20 +97,20 @@ $$
 1 + 1 + 1_{1} = 1 \ i \ 1_{2} \\
 \end{align}
 $$
-![[Pasted image 20250109190036.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250109190036.png]]
 
 Funkcje logiczne dla sygnałów wyjściowych Y i C2 otrzymamy na podstawie reguł dodawania z przeniesieniem. W tym celu układamy tablice Karnaugha. Funkcje sprowadzamy do postaci NAND i NOT, aby można było zastosować standardowe bramki logiczne.
 
-![[Pasted image 20250109190149.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250109190149.png]]
 
-![[Pasted image 20250109190156.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250109190156.png]]
 
-![[Pasted image 20250109190226.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250109190226.png]]
 
-![[Pasted image 20250109190230.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250109190230.png]]
 
 ###### Sumator Pełny (Uwzględnia przeniesienia, jako sygnał wejściowy)
-![[Pasted image 20250111110546.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250111110546.png]]
 
 ##### Komparator
 Układ kombinacyjny służący do porównywania dwóch liczb binarnych (komparator cyfrowy), albo dwóch poziomów napięć (komparator analogowy). Głównym zadaniem komparatora cyfrowego jest analiza dwóch wejściowych sygnałów cyfrowych (reprezentujących liczby) i wydanie odpowiedniego sygnału wyjściowego, który wskazuje wynik porównania.
@@ -120,8 +120,8 @@ Komparator przyjmuje dwa zestawy sygnałów binarnych oznaczonych, jako A i B. K
 - A < B
 - A = B
   
-![[Pasted image 20250109191618.png]]
-![[Pasted image 20250111123850.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250109191618.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250111123850.png]]
 ###### Jak komparator porównuje bity?
 1. **Porównanie bitów zaczynając od najbardziej znaczącego (MSB)**: Komparator zaczyna porównywać bity obu liczb od najbardziej znaczącego bitu (najwyższy bit, czyli najbardziej na lewo). To jest kluczowy punkt, ponieważ najbardziej znaczący bit w systemie binarnym ma największy wpływ na wartość liczby.
     - Jeśli bit w liczbie **A** jest większy niż odpowiadający mu bit w liczbie **B**, to liczba **A** jest większa i komparator natychmiast wydaje sygnał wskazujący, że **A > B**.
@@ -136,7 +136,7 @@ Komparator przyjmuje dwa zestawy sygnałów binarnych oznaczonych, jako A i B. K
 Kluczowy element procesora. Jej główną funkcją jest wykonywanie operacji arytmetycznych, takich jak dodawanie, odejmowanie, mnożenie, przesunięcie bitowe, oraz wykonywanie operacji logicznych takich jak AND, OR, XOR, NOT na danych wejściowych. ALU przyjmuje dane wejściowe w postaci binarnej i na ich podstawie wykonuje określoną operację, a wynik tej operacji jest przekazywany na wyjście. Jest to układ kombinacyjny, ponieważ stany wyjść są zależnie tylko od stanów wejść, a historyczne stany jednostki nie wpływają na wynik.
 ###### Budowa ALU
 Schemat budowy 2 bitowej jednostki arytmetyczno logicznej:
-![[Pasted image 20250111115154.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250111115154.png]]
 
 W tym przypadku jednostka arytmetyczno logiczna składa się z bramek umożliwiających operacje logiczne: XOR, AND, OR. Następnie mamy sumatory pełne, które umożliwiają dodawanie z uwzględnieniem przeniesienia, oraz informują o przeniesieniu na wyjściu. Układ posiada również dwa multipleksery, które umożliwiają sterowanie wyjściem układu, tj. który wynik operacji ALU chcemy odczytać. Warto zauważyć, że ALU wykonuje te operacje równolegle, ze względu na izolacje poszczególnych układów.
 
@@ -155,7 +155,7 @@ W tym przypadku jednostka arytmetyczno logiczna składa się z bramek umożliwi
 ### Układy Sekwencyjne
 Rodzaj układów cyfrowych, w których stan wyjść zależy od stanu wejść układu oraz poprzedniego stanu, zwanego stanem wewnętrznym, pamiętanego w zespole rejestrów (**pamięci**). Jeśli stan wewnętrzny układu nie ulega zmianie pod wpływem podania na wejście różnych sygnałów, to taki stan nazywa się **stanem stabilnym**. Wyróżniamy dwa rodzaje układów sekwencyjnych: **synchroniczne** i **asynchroniczne**.
 
-![[Pasted image 20250111125030.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250111125030.png]]
 
 Układ sekwencyjny może zostać opisany, jako:
 $$
@@ -294,7 +294,7 @@ F(S)
 $$
 W tym automacie wyjście zależy tylko i wyłącznie od stanu wewnętrznego. Zapewnia stabilność ponieważ zmiana wyjścia następuje dopiero po przejściu do następnego stanu. Zazwyczaj wymaga on więcej stanów niż automat Mealy'ego, ale jest prostszy w projektowaniu i analizie.
 
-[Synteza Automatów](http://antoni.sterna.staff.iiar.pwr.wroc.pl/luc/LUC_synteza_automatow.pdf)![[synteza-automat-mealy-rozpoznajacy-ciag.pdf]]
+[Synteza Automatów](http://antoni.sterna.staff.iiar.pwr.wroc.pl/luc/LUC_synteza_automatow.pdf)![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/synteza-automat-mealy-rozpoznajacy-ciag.pdf]]
 ##### Dlaczego automat Moore'a jest prostszy w projektowaniu i analizie od automatu Mealy'ego?
 Ponieważ dla automatu Moore'a, stan wyjścia zależy tylko i wyłącznie od stanu wewnętrznego automatu. Nie trzeba dzięki temu analizować kombinacji stanu wew. i wejścia do określenia wyjścia. Dodatkowo wyjście zmienia się tylko przy przejściu do innego stanu, co eliminuje ryzyko chwilowych, niepożądanych zmian wyjścia. Odbywa się to natomiast kosztem ilości stanów, ponieważ przy stanie wyjść, nie uwzględniamy wejść.
 
@@ -304,7 +304,7 @@ Układ sekwencyjny, którego sygnał na wyjściu może zależeć od stanu na jeg
 
 Przerzutniki zbudowane są z bramek logicznych lub specjalnych układów scalonych. Podstawowym mechanizmem działania jest sprzężenie zwrotne, które pozwala na utrzymanie określonego stanu. Poniżej przedstawiono prosty schemat przerzutnika D:
 
-![[Pasted image 20250111155314.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250111155314.png]]
 
 Przerzutniki pełnią kluczową rolę w wielu zastosowaniach układów cyfrowych. Ich podstawowe funkcje to:
 - **Przechowywanie informacji:** Służą jako podstawowe jednostki pamięci w układach logicznych.

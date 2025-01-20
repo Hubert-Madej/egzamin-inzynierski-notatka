@@ -11,7 +11,7 @@ To jeden z najprostszych algorytmów sortowania. Działa podobnie do sortowania 
 - Dopóki $j >= 0$ oraz $tablica[j] > k$ $->$ przesuń wartość spod $j$ na pozycje $j+1$.
 - Jeśli pętla przerwana $->$ cofnij wolny wskaźnik w prawo o jedną pozycję ($j+1$) i ustaw wartość tablicy na $k$ ($tablica[j] = k$).
 
-![[insertion_sort.jpg]]
+![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/insertion_sort.jpg]]
 
 **Złożoność czasowa:**
 - Najlepszy przypadek: $O(n)$ (dla posortowanej tablicy).
@@ -82,7 +82,7 @@ Algorytm:
 - Wyznacz szybki wskaźnik $j$ iterując się po elementach między z przedziału $<i+1, n)$, gdzie $n$ to długość tablicy.
 - Korzystając z szybkiego wskaźnika znajdź najmniejszy / największy element w zbiorze $<i+1, n)$ i zamień go z elementem wskazywanym przez wolny wskaźnik $j$.
 
-![[selection_sort_min.jpg]]
+![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/selection_sort_min.jpg]]
 
 Złożoność czasowa: $O(n^2)$ niezależnie od danych.
 Złożoność pamięciowa: $O(1)$.
@@ -117,7 +117,7 @@ Polega na wielokrotnym przechodzeniu przez tablicę i zamienianiu miejscami sąs
 - Po przejściu wszystkich elementów, zmniejsz $n$ o 1 ($n -= 1$).
 - Powtarzaj kroki 2, aż $n$ będzie równe 1 (czyli gdy porównania obejmują tylko pierwszy element).
 
-![[bubble-sort.jpg]]
+![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/bubble-sort.jpg]]
 
 **Kod w Pythonie:**
 ```python
@@ -151,7 +151,7 @@ Quicksort to jeden z najszybszych algorytmów sortowania, oparty na metodzie „
 2. Podziel tablicę na dwie części: mniejsze i większe od pivot.
 3. Rekurencyjnie sortuj obie części.
 
-![[quick-sort.jpg]]
+![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/quick-sort.jpg]]
 
 **Złożoność czasowa:**
 - Średnio: $O(n \ log \ n)$

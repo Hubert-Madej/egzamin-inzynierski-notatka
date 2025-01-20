@@ -12,18 +12,18 @@ gdzie:
 **Rodzaje Grafów:**
 1. **Graf nieskierowany** - w tym rodzaju grafu krawędzie nie mają kierunku. Połączenia takie jak $(A,B)$ i $(B, A)$ są sobie równoważne. Przykładem takiego grafu może być sieć ulic dwukierunkowych.
    
-   ![[undirected-graph.jpg]]
+   ![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/undirected-graph.jpg]]
    
 2. **Graf skierowany** - w tym rodzaju grafu krawędzie mają kierunek. Połączenie $(A, B)$ oznacza drogę z $A$ do $B$. Połączenie $(B,A)$ jest zupełnie innym połączeniem tych dwóch punktów. Przykładem takiego grafu może być sieć ulic jednokierunkowych
    
-   ![[directed-graph.jpg]]
+   ![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/directed-graph.jpg]]
 
 3. **Graf ważony** - krawędź ma przypisaną wagę (ang. weight), która może oznaczać odległość, koszt, czas, itp. Przykładem takiego grafu może być mapa miast z odległościami.
    
-   ![[weighted-graph.jpg]]
+   ![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/weighted-graph.jpg]]
    
 4. **Graf prosty** - nie zawiera pętli (krawędzi prowadzącej z wierzchołka do samego siebie), ani wielokrotnych krawędzi między tą samą parą wierzchołków.
- ![[simple-graph.jpg]]
+ ![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/simple-graph.jpg]]
  
 5. **Graf pełny** - każdy wierzchołek jest połączony z każdym innym. Liczba krawędzi w tym przypadku wynosi: $\frac{n(n-1)}{2}$.
 
@@ -101,7 +101,7 @@ Pierwszy wiersz i kolumna stanowią "labelki" węzłów w grafie.
 
 **Graficzna reprezentacja grafu:**
 
-![[graph.jpg]]
+![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/graph.jpg]]
 
 Początkowo wszystkie dystanse (oprócz wierzchołka startowego, którego dystans wynosi $0$) są ustawione na $\infty$, ponieważ są nieznane. Lista odwiedzonych wierzchołków jest pusta. Kolejkę priorytetową wierzchołków do przetworzenia inicjalizujemy parą $(0,Startowy \ Wierzchołek)$ — gdzie pierwszy element oznacza dystans od wierzchołka startowego, a drugi to sam wierzchołek. Następnie, dopóki kolejka nie jest pusta, wykonujemy następujące kroki:
 1. Pobieramy wierzchołek o **najmniejszym** dystansie z kolejki.

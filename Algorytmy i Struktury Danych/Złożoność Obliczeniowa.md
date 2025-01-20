@@ -30,7 +30,7 @@ Do wyrażenia złożoności algorytmów używa się notacji asymptotycznej, kt�
 3. **Ocena skalowalności:**  
     Pomaga ocenić, jak algorytm będzie się zachowywał przy rosnących danych wejściowych.
 
-![[Pasted image 20250111171410.png]]
+![[egzamin-inzynierski-notatka/Algorytmy i Struktury Danych/attachments/Pasted image 20250111171410.png]]
 
 ```python
 def example_algorithm(n):

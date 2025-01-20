@@ -131,19 +131,19 @@ Indeksowanie komórek odbywa się zgodnie z [kodem Gray'a](https://pl.wikipedia.
 ##### Zasady Minimalizacji
 W celu minimalizacji funkcji logicznych należy wypełnić mapę Karnaugha wartościami (1 lub 0) odpowiadającymi wartościom funkcji dla wartości argumentów opisujących dane pole w tablicy. Następnie grupuje się pola o wybranej wartości (1 aby uzyskać funkcję minimalną w postaci sumy, 0 dla postaci iloczynu). Grupy muszą mieć kształt prostokąta o długościach boków będących potęgami dwójki (przy czym może on przechodzić przez krawędź tablicy, a dla liczby zmiennych powyżej 4 nie musi być spójny, a jedynie łączyć pola sąsiednie logicznie). W celu uzyskania postaci minimalnej, grupy powinny być możliwie największe. Jedno pole może należeć do wielu grup. W każdej uzyskanej grupie część wartości zmiennych będzie wspólna dla wszystkich pól i to z nich powstaje wyrażenie odpowiadające danej grupie. Jeżeli pogrupowane zostały jedynki, wyrażenie dla pojedynczej grupy będzie miało postać iloczynu zmiennych, które, jeżeli w danej grupie przyjmują wartość 1, będą występowały w postaci prostej, jeżeli 0 – w postaci zanegowanej (zmienne przyjmujące w danej grupie różne wartości są pomijane); funkcja końcowa będzie sumą tych iloczynów. Jeżeli utworzono grupy zer, wyrażenie dla danej grupy będzie sumą zmiennych w postaci zanegowanej, jeżeli w danej grupie mają wartość 1, prostej, jeśli 0; wynik będzie iloczynem takich sum. Tak więc im grupa jest większa, od tym mniejszej liczby zmiennych zależy.
 
-![[Pasted image 20250108070743.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108070743.png]]
 
-![[Pasted image 20250108070800.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108070800.png]]
 
 ##### Przykład
-![[Pasted image 20250108071418.png]]
-![[Pasted image 20250108071428.png]]
-![[Pasted image 20250108071447.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108071418.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108071428.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108071447.png]]
 
 ##### Przykład 2
-![[Pasted image 20250108071532.png]]
-![[Pasted image 20250108071548.png]]![[Pasted image 20250108071608.png]]
-![[Pasted image 20250108071619.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108071532.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108071548.png]]![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108071608.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108071619.png]]
 
 ##### [Przykłady Zadań](https://www.mcholewa.us.edu.pl/Downloads/root/siatki-karnaugh.pdf)
 
@@ -204,14 +204,14 @@ Kolejnym krokiem jest uproszczenie grup. Jest to proces, który finalnie powinie
 
 Proces uproszczania polega na badaniu grupy $n$ i $n+1$. Polega to na porównaniu wartości i znalezieniu tych, które różnią się tylko na jednej pozycji. Pozycję, na której dwie wartości się różnią oznaczamy $-$ (minus). Powstałe grupy również względem ilości jedynek. Otrzymujemy implikanty rozmiaru 2. Jeśli, któryś iloczyn nie może być połączony z żadnym innym oznaczamy go $*$ (gwiazdka) - jest to nasz implikant prosty, czyli taki, którego nie da się już bardziej uprościć. Proces ten powtarzamy, łącząc implikanty rozmiaru 2 w 4 itd.
 
-![[Pasted image 20250108181748.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108181748.png]]
 
 W naszym przypadku, aby uzyskać wszystkie możliwe implikanty proste, wystarczyło dojść do rozmiaru 4, natomiast można dojść do 8, 16 itd.
 
 Teraz tworzymy tabelę, która pozwoli nam uzyskać finalny wynik. Wiersze tej tabeli to znalezione implikanty proste (te, które oznaczaliśmy gwiazdką), a kolumny to liczby ze zbioru $m$. 
 ***Nie bierzemy już pod uwagę stanów nieokreślonych.*** W tabeli zaznaczamy „X” tam, gdzie dany implikant pokrywa dany minterm (czyli zawiera tę kombinację w swojej definicji). Teraz poszukujemy implikantów istotnych (czyli najważniejszych) - jeśli w kolumnie jest tylko jeden "X", oznacza to, że tylko jeden implikant może pokryć ten minterm (wartość $m$ z kolumny). Mówiąc prościej jeden X w kolumnie, dany stan wejść może zostać uzyskany tylko przez jedną kombinacje wejść. Pozostałe mintermy pokrywamy za pomocą metody Petricka, lub wybierając tak, aby użyć minimalnej liczby implikantów.
 
-![[Pasted image 20250108182605.png]]
+![[egzamin-inzynierski-notatka/Teoria Układów Cyfrowych/attachments/Pasted image 20250108182605.png]]
 
 Zatem na pewno w naszym wyniku otrzymamy:
 $$

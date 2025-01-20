@@ -7,7 +7,7 @@ Każdy plik jest opisany przez:
     - **Początkowy blok** – pierwszy blok zajmowany przez plik.
     - **Rozmiar pliku** – liczba kolejnych bloków zajmowanych przez plik.
 
-![[Pasted image 20250106160937.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106160937.png]]
 #### **Zalety**
 1. **Wysoka wydajność odczytu i zapisu** – ponieważ bloki pliku są fizycznie sąsiadujące, można je odczytać sekwencyjnie.
 2. **Prosta implementacja** – łatwo ustalić, które bloki są zajęte.
@@ -18,7 +18,7 @@ Każdy plik jest opisany przez:
 ### **2. Alokacja łańcuchowa (Linked Allocation)**
 Dane pliku są przechowywane w dowolnych blokach na dysku. Każdy blok pliku zawiera wskaźnik do następnego bloku. System plików przechowuje wskaźnik do pierwszego bloku każdego pliku.
 
-![[Pasted image 20250106163932.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106163932.png]]
 
 #### **Zalety**
 1. **Brak fragmentacji zewnętrznej** – pliki mogą być przechowywane w rozproszonych blokach.
@@ -37,7 +37,7 @@ Każdy plik ma własny **blok indeksowy**, który przechowuje listę wskaźnikó
 1. **Dodatkowy narzut pamięci** – każdy plik wymaga bloku indeksowego.
 2. **Ograniczenie liczby bloków** – liczba bloków, które mogą być skojarzone z plikiem, zależy od rozmiaru bloku indeksowego.
 
-![[Pasted image 20250106163946.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106163946.png]]
 
 ---
 ### **Metody rozwiązywania problemu alokacji pamięci dla dużych plików**
@@ -117,4 +117,4 @@ Wskaźniki w Inode są podzielone na różne kategorie:
     - **1 wskaźnik dwupoziomowy pośredni** – wskazuje na 1 blok indeksowy drugiego poziomu, który obsługuje kolejne 1024 × 1024 bloki danych.
     - **1 wskaźnik trójpoziomowy pośredni** – obsługuje jeszcze większe pliki.
 
-![[Pasted image 20250106164335.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106164335.png]]

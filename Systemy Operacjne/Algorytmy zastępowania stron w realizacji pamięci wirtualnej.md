@@ -1,6 +1,6 @@
 Pamięć wirtualna [1](https://www.youtube.com/watch?v=A9WLYbE0p-I) [2](https://www.youtube.com/watch?v=8yO2FBBfaB0) to mechanizm umożliwiający uruchamianie programów, które wymagają większej ilości pamięci niż fizycznie dostępna w systemie. Działa poprzez mapowanie logicznych adresów pamięci na adresy fizyczne i wykorzystuje technikę stronicowania. Strony (ang. _pages_) są jednostkami logicznej pamięci wirtualnej, które są ładowane do ram (ang. _frames_) w pamięci fizycznej. Gdy strona wymagana przez proces nie znajduje się w pamięci fizycznej, występuje **błąd strony** (ang. _page fault_), a system musi zastąpić jedną z już załadowanych stron nową.
 
-![[Pasted image 20250106130507.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106130507.png]]
 
 Wybór strony do zastąpienia jest realizowany przez **algorytmy zastępowania stron**, które mają na celu zminimalizowanie liczby błędów stron i zapewnienie efektywnego działania systemu.
 
@@ -26,13 +26,13 @@ Wybór strony do zastąpienia jest realizowany przez **algorytmy zastępowania s
     - Załadować ją do dostępnej ramki w pamięci fizycznej.
     - Jeśli wszystkie ramki są zajęte, jedna ze stron musi zostać usunięta – tutaj wkracza **algorytm zastępowania stron**.
 
-![[Pasted image 20250106154936.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106154936.png]]
 
-![[Pasted image 20250106155047.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106155047.png]]
 
-![[Pasted image 20250106155102.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106155102.png]]
 
-![[Pasted image 20250106155116.png]]
+![[egzamin-inzynierski-notatka/Systemy Operacjne/attachments/Pasted image 20250106155116.png]]
 
 ### **Cele algorytmów zastępowania stron**
 1. **Minimalizacja liczby błędów stron** – zmniejszenie liczby sytuacji, w których konieczne jest ładowanie stron z pamięci masowej.
